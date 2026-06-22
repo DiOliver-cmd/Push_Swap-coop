@@ -62,20 +62,15 @@ int	verify_max_len(int argc, char *argv[])
 	return (SUC);
 }
 
-int	main(int argc, char *argv[])
+int	verify_duplicate(t_node *stack_a, int value)
 {
-	argc--;
-	int a = verify_is_digit_word(argc, argv);
-	int b = repeated_word(argc, argv);
-	int c = verify_max_len(argc, argv);
-
-	printf("%d, %d, %d", a, b, c);
-	if (
-		argc <= 1
-		|| a == ERR
-		|| b == ERR
-		|| c == ERR
-	)
-		return (1);
-	printf("Deu certo");
+	while (stack_a)
+	{
+		if (stack_a->value == value)
+			return (1);
+		stack_a = stack_a->next;
+	}
+	return (0);
 }
+
+

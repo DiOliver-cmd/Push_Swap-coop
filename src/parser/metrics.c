@@ -6,9 +6,11 @@
 /*   By: dilferre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 13:25:14 by dilferre          #+#    #+#             */
-/*   Updated: 2026/06/22 13:25:31 by dilferre         ###   ########.fr       */
+/*   Updated: 2026/06/22 19:36:36 by dilferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "push_swap.h"
 
 double    count_disorder(t_node *stack_a)
 {
@@ -33,4 +35,27 @@ double    count_disorder(t_node *stack_a)
     if (total_pairs == 0)
         return (0.0);
     return ((double)mistakes / total_pairs);
+}
+
+void	dispatch_algorithm(t_node **stack_a, t_node **stack_b, t_options opt)
+{
+	double	disorder;
+
+	if (opt.strategy == START_SIMPLE)
+		sort_simple(stack_a, stack_b);
+	else if (opt.strategy == STRAT_MEDIUM)
+		sort_medium(stack_a, stack_b);
+	else if (opt.strategy == STRAT_COMPLEX)
+		sort_complex(stack_a, stack_b);
+	else
+	{
+		disorder = count_disorder(*stack_a);
+
+		if (disorder < 0.2)
+			sort_simples(stack_a, stack_b);
+		else if (disorder < 0.5)
+			sort_medium(stack_a, stack_b);
+		else
+			sort_complex(stack_a, stack_b);
+	}
 }
