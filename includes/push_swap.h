@@ -6,7 +6,7 @@
 /*   By: masalaib <masalaib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 19:18:19 by masalaib          #+#    #+#             */
-/*   Updated: 2026/06/22 11:16:28 by dilferre         ###   ########.fr       */
+/*   Updated: 2026/06/23 12:00:08 by dilferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,13 @@
 
 typedef struct s_node
 {
-	int				value;
-	struct s_node	*next;
+	int				value;//inteiro recebido
+	int				index;//rank do n após ordenado
+	struct s_node	*next;//ponteiro para o proximo nó
+	struct s_node	*prev;//ponteiro para o nó anterior
 }	t_node;
+
+double	count_disorder(t_node *stack_a);
+void	dispatch_algorithm(t_node **stack_a, t_node **stack_b, t_options opt);
 
 #endif
