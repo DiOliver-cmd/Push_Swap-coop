@@ -6,7 +6,7 @@
 #    By: dilferre <dilferre@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/22 13:00:00 by dilferre          #+#    #+#              #
-#    Updated: 2026/06/03 12:11:01 by dilferre         ###   ########.fr        #
+#    Updated: 2026/06/23 13:14:51 by dilferre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,10 @@ SRCS =	ft_isalpha.c \
 	ft_lstdelone.c \
 	ft_lstclear.c \
 	ft_lstiter.c \
-	ft_lstmap.c
+	ft_lstmap.c \
+	ft_printf.c \
+	ft_handler_nbr.c \
+	ft_handler.c
 
 OBJS = $(SRCS:.c=.o)
 

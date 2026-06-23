@@ -6,7 +6,7 @@
 /*   By: masalaib <masalaib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 19:18:19 by masalaib          #+#    #+#             */
-/*   Updated: 2026/06/23 12:00:08 by dilferre         ###   ########.fr       */
+/*   Updated: 2026/06/23 13:10:54 by dilferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # define MAX_LEN_WORD 11
 
 # include "../../libft/libft.h"
-# include "stdio.h"
+# include <unistd.h>
 
 typedef struct s_node
 {
