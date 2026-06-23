@@ -6,19 +6,21 @@
 /*   By: dilferre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 13:25:14 by dilferre          #+#    #+#             */
-/*   Updated: 2026/06/22 19:36:36 by dilferre         ###   ########.fr       */
+/*   Updated: 2026/06/23 14:41:16 by dilferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-double    count_disorder(t_node *stack_a)
+double    count_disorder(t_stacks *stack_a)
 {
   int mistakes;
   int total_pairs;
   t_node  *i;
   t_node  *j;
 
+  mistakes = 0;
+  total_pairs = 0;
   i = stack_a;
   while (i != NULL)
     {
