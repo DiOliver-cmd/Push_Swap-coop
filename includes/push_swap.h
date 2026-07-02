@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: masalaib <masalaib@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 19:18:19 by masalaib          #+#    #+#             */
-/*   Updated: 2026/07/01 16:50:59 by dilferre         ###   ########.fr       */
+/*   Updated: 2026/07/01 23:10:00 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ typedef struct s_data
 	int	rra;
 	int	rrb;
 	int	rrr;
+	int	bench;
 }	t_data;
 
 /* verificação de args */
