@@ -16,10 +16,10 @@ static int	is_flag(char *arg, t_options *opt)
 {
 	if (ft_strncmp(arg, "--simple", -1) == ERR)
 		opt->strategy = STRAT_SIMPLE;
-	else if (ft_strncmp(arg, "--medium", -1) == ERR)
-		opt->strategy = STRAT_MEDIUM;
-	else if (ft_strncmp(arg, "--complex", -1) == ERR)
-		opt->strategy = STRAT_COMPLEX;
+	// else if (ft_strncmp(arg, "--medium", -1) == ERR)
+	// 	opt->strategy = STRAT_MEDIUM;
+	// else if (ft_strncmp(arg, "--complex", -1) == ERR)
+	// 	opt->strategy = STRAT_COMPLEX;
 	else if (ft_strncmp(arg, "--adaptive", -1) == ERR)
 		opt->strategy = STRAT_ADAPTIVE;
 	else if (ft_strncmp(arg, "--bench", -1) == ERR)
@@ -27,6 +27,11 @@ static int	is_flag(char *arg, t_options *opt)
 	else
 		return (ERR);
 	return (SUC);
+}
+
+void	iniciate_options(void)
+{
+	// IMPLEMENTEAR
 }
 
 int	parse_options(int argc, char *argv[], t_options *opt)

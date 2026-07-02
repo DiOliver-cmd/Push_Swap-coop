@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 19:18:19 by masalaib          #+#    #+#             */
-/*   Updated: 2026/07/01 23:10:00 by marvin           ###   ########.fr       */
+/*   Updated: 2026/07/02 18:44:06 by dilferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ double	calc_desorder(void);
 
 /* dados / opções */
 t_data		*get_data(void);
-t_options	*get_options(void);
 int			parse_options(int argc, char *argv[], t_options *opt);
 
 /* algoritmo */
@@ -79,6 +78,7 @@ void	show_bench(t_options *opt);
 void	sort_simple(void);
 void	sort_medium(void);
 void	sort_complex(void);
+void	sort_small(void);
 
 /* movimentos */
 void	sa(void);

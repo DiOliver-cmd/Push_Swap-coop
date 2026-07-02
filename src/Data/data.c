@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/30 19:43:00 by masalaib          #+#    #+#             */
-/*   Updated: 2026/07/01 23:09:59 by marvin           ###   ########.fr       */
+/*   Updated: 2026/07/02 18:44:32 by dilferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ static char	*strategy_name(t_strategy s)
 {
 	if (s == STRAT_SIMPLE)
 		return ("Simple");
-	if (s == STRAT_MEDIUM)
-		return ("Medium");
-	if (s == STRAT_COMPLEX)
-		return ("Complex");
+	// if (s == STRAT_MEDIUM)
+	// 	return ("Medium");
+	// if (s == STRAT_COMPLEX)
+	// 	return ("Complex");
 	return ("Adaptive");
 }
 
@@ -38,8 +38,8 @@ static char	*complexity_name(t_strategy s)
 {
 	if (s == STRAT_SIMPLE)
 		return ("O(n2)");
-	if (s == STRAT_MEDIUM)
-		return ("O(n*sqrt(n))");
+	// if (s == STRAT_MEDIUM)
+	// 	return ("O(n*sqrt(n))");
 	return ("O(n log n)");
 }
 

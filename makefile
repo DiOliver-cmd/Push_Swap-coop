@@ -6,13 +6,13 @@
 #    By: masalaib <marvin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/18 20:15:30 by masalaib          #+#    #+#              #
-#    Updated: 2026/07/01 16:46:15 by dilferre         ###   ########.fr        #
+#    Updated: 2026/07/02 17:50:07 by dilferre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 CC = cc
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -g
 RM = rm -rf
 
 LIBFT_DIR = libft
@@ -38,11 +38,10 @@ SRCS = $(PARSER_DIR)/verify.c \
 	   $(DATA_DIR)/data.c \
 	   $(RUN_DIR)/ops_swap.c \
 	   $(RUN_DIR)/ops_push.c \
-	   $(RUN_DIR)/ops_rotate.c \
-	   $(RUN_DIR)/ops_reverse_rotate.c \
+	   $(RUN_DIR)/r_moves.c \
+	   $(RUN_DIR)/reverse_r_moves.c \
 	   $(ALGO_DIR)/sort_simple.c \
-	   $(ALGO_DIR)/sort_medium.c \
-	   $(ALGO_DIR)/sort_complex.c \
+	   $(ALGO_DIR)/sort_small.c \
 	   main.c
 
 OBJS = $(SRCS:.c=.o)
