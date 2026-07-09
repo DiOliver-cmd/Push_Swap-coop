@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: masalaib <masalaib@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 19:18:19 by masalaib          #+#    #+#             */
-/*   Updated: 2026/07/07 15:30:00 by marvin           ###   ########.fr       */
+/*   Updated: 2026/07/07 15:30:00 by dilferre          ###   ########.fr      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 
 # include "../libft/libft.h"
 # include <unistd.h>
-# include <stdio.h>
 
 typedef enum e_strategy
 {
@@ -44,6 +43,14 @@ typedef struct s_node_costs
 	int	cb_up;
 	int	cb_down;
 }	t_node_costs;
+
+typedef struct s_best_func_args
+{
+	int	val;
+	int	*bp;
+	int	*mp;
+	int	*i;
+}	t_best_func_args;
 
 typedef struct s_cost
 {
@@ -92,7 +99,6 @@ int		parse_options(int argc, char *argv[], t_options *opt);
 
 /* algoritmo */
 void	dispatch_algorithm(t_options *opt);
-void	show_bench(t_options *opt);
 void	sort_simple(void);
 void	sort_medium(void);
 void	sort_complex(void);
@@ -124,5 +130,12 @@ void	rr(void);
 void	rra(void);
 void	rrb(void);
 void	rrr(void);
+
+// Print
+char	*strategy_name(t_strategy s);
+char	*complexity_name(t_strategy s);
+int		total_ops(t_data *d);
+void	put_float(double n, int fd);
+void	show_bench(t_options *opt);
 
 #endif

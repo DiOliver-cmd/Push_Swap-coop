@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ops_push.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dilferre <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dilferre <dilferre@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/01 16:34:38 by dilferre          #+#    #+#             */
 /*   Updated: 2026/07/01 16:34:43 by dilferre         ###   ########.fr       */

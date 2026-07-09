@@ -3,9 +3,9 @@
 /*                                                        :::      ::::::::   */
 /*   sort_medium.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: masalaib <masalaib@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/02 18:54:19 by dilferre          #+#    #+#             */
+/*   Created: 2026/07/02 18:54:19 by masalaib          #+#    #+#             */
 /*   Updated: 2026/07/07 18:00:00 by dilferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -37,14 +37,15 @@ static void	reset_stack(void)
 	}
 }
 
-static void	node_to_b(double range, double total)
+static void	node_to_b(double range, double total, int max_value)
 {
 	t_list	*list;
 	double	position;
 
 	list = *get_stack_a();
 	position = 0;
-	while (list != NULL && (((double)list->value) > range))
+	while (list != NULL && (((double)list->value) > range
+			|| list->value == max_value))
 	{
 		list = list->next;
 		position++;
@@ -57,13 +58,15 @@ void	sort_medium(void)
 {
 	double	total;
 	double	range;
+	int		max_value;
 
 	reset_stack();
+	max_value = ft_lstsize(*get_stack_a()) - 1;
 	range = 1.3 * my_sqrt(ft_lstsize(*get_stack_a()));
 	total = (double)ft_lstsize(*get_stack_a());
-	while (total > 1)
+	while (total > 2)
 	{
-		node_to_b(range, total);
+		node_to_b(range, total, max_value);
 		total = (double)ft_lstsize(*get_stack_a());
 		range += 1;
 	}

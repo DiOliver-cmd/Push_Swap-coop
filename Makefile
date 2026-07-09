@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:   #
-#                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/06/18 20:15:30 by masalaib          #+#    #+#              #
-#    Updated: 2026/07/07 18:00:00 by marvin           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME = push_swap
 
 CC = cc
@@ -37,6 +25,7 @@ SRCS = $(PARSER_DIR)/verify.c \
 	   $(DESORDER_DIR)/desorder.c \
 	   $(OPTIONS_DIR)/options.c \
 	   $(DATA_DIR)/data.c \
+	   $(DATA_DIR)/Print.c \
 	   $(RUN_DIR)/ops_swap.c \
 	   $(RUN_DIR)/ops_push.c \
 	   $(RUN_DIR)/r_moves.c \

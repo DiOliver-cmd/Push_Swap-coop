@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   verify.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: masalaib <masalaib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 19:18:07 by masalaib          #+#    #+#             */
 /*   Updated: 2026/07/01 16:57:59 by dilferre         ###   ########.fr       */

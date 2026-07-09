@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   sort_simple.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dilferre <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dilferre <dilferre@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/01 16:36:27 by dilferre          #+#    #+#             */
 /*   Updated: 2026/07/01 16:36:56 by dilferre         ###   ########.fr       */

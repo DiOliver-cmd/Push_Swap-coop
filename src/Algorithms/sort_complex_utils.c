@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   sort_complex_utils.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dilferre <dilferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/07 18:00:00 by marvin            #+#    #+#             */
-/*   Updated: 2026/07/08 12:30:00 by marvin           ###   ########.fr       */
+/*   Created: 2026/07/07 18:00:00 by dilferre          #+#    #+#             */
+/*   Updated: 2026/07/08 12:30:00 by dilferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-static void	update_best_min(t_list *stack, int val, int *bp, int *mp, int *i)
+static void	update_best_min(t_list *stack, t_best_func_args args)
 {
 	int	bv;
 	int	mv;
@@ -24,28 +24,33 @@ static void	update_best_min(t_list *stack, int val, int *bp, int *mp, int *i)
 		if (stack->value < mv)
 		{
 			mv = stack->value;
-			*mp = *i;
+			*(args.mp) = *(args.i);
 		}
-		if (stack->value > val && stack->value < bv)
+		if (stack->value > args.val && stack->value < bv)
 		{
 			bv = stack->value;
-			*bp = *i;
+			*(args.bp) = *(args.i);
 		}
 		stack = stack->next;
-		(*i)++;
+		(*args.i)++;
 	}
 }
 
 int	find_target_generic(t_list *stack, int value, int fallback)
 {
-	int	best_pos;
-	int	min_pos;
-	int	i;
+	int					best_pos;
+	int					min_pos;
+	int					i;
+	t_best_func_args	args;
 
 	best_pos = -1;
 	min_pos = -1;
 	i = 0;
-	update_best_min(stack, value, &best_pos, &min_pos, &i);
+	args.val = value;
+	args.bp = &best_pos;
+	args.mp = &min_pos;
+	args.i = &i;
+	update_best_min(stack, args);
 	if (best_pos != -1)
 		return (best_pos);
 	if (min_pos != -1)

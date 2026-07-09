@@ -3,9 +3,9 @@
 /*                                                        :::      ::::::::   */
 /*   desorder.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: masalaib <masalaib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/29 00:18:56 by marvin            #+#    #+#             */
+/*   Created: 2026/06/29 00:18:56 by masalaib          #+#    #+#             */
 /*   Updated: 2026/07/01 16:18:16 by dilferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -37,4 +37,11 @@ double	calc_desorder(void)
 	if (count == 0)
 		return (0.0);
 	return (error / count);
+}
+
+t_data	*get_data(void)
+{
+	static t_data	data;
+
+	return (&data);
 }

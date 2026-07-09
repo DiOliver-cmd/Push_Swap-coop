@@ -3,9 +3,9 @@
 /*                                                        :::      ::::::::   */
 /*   sort_medium_utils.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: masalaib <masalaib@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/07 18:00:00 by dilferre          #+#    #+#             */
+/*   Created: 2026/07/02 18:54:19 by masalaib          #+#    #+#             */
 /*   Updated: 2026/07/07 18:00:00 by dilferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -61,7 +61,7 @@ static int	find_insert_position(int value)
 		position++;
 	}
 	if (best_position == -1)
-		best_position = 0;
+		best_position = position;
 	return (best_position);
 }
 
