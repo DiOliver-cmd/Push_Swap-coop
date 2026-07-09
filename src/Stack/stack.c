@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/28 18:21:56 by marvin            #+#    #+#             */
-/*   Updated: 2026/06/29 00:52:40 by marvin           ###   ########.fr       */
+/*   Updated: 2026/07/07 18:00:00 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,19 @@
 
 t_list	**get_stack_a(void)
 {
-	static t_list	*stack_a = NULL;
+	static t_list	*stack_a;
 
 	return (&stack_a);
 }
 
 t_list	**get_stack_b(void)
 {
-	static t_list	*stack_b = NULL;
+	static t_list	*stack_b;
 
 	return (&stack_b);
 }
 
-// Function to help in tests
-void	set_stack_a(t_list *new_stack)
-{
-	*(get_stack_a()) = new_stack;
-}
-
-void	nothing(void *content)
+static void	nothing(void *content)
 {
 	(void)content;
 }

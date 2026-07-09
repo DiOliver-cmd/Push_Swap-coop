@@ -3,19 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   sort_small.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/02 by dilferre                                         */
+/*   Created: 2026/07/05 19:10:27 by marvin            #+#    #+#             */
+/*   Updated: 2026/07/05 20:00:09 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-/*
-	Resolve o caso de exatamente 3 elementos com no maximo 2
-	operacoes, sem nunca tocar a pilha b. Os 6 casos possiveis
-	de ordenacao de 3 valores distintos sao cobertos pelas
-	comparacoes abaixo (x = topo, y = meio, z = fundo).
-*/
 static void	sort_three(t_list *a)
 {
 	int	x;
@@ -44,6 +40,7 @@ static void	sort_three(t_list *a)
 		rra();
 	}
 }
+
 void	sort_small(void)
 {
 	t_list	*a;

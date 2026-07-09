@@ -1,23 +1,24 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:   #
 #                                                     +:+ +:+         +:+      #
-#    By: masalaib <marvin@student.42.fr>            +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/18 20:15:30 by masalaib          #+#    #+#              #
-#    Updated: 2026/07/02 17:50:07 by dilferre         ###   ########.fr        #
+#    Updated: 2026/07/07 18:00:00 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
+
 CC = cc
-CFLAGS = -Wall -Werror -Wextra -g
+CFLAGS = -Wall -Werror -Wextra
 RM = rm -rf
 
 LIBFT_DIR = libft
 LIBFT_LIB = $(LIBFT_DIR)/libft.a
-LIBS = -lreadline $(LIBFT_LIB)
+LIBS = $(LIBFT_LIB)
 
 SRC_DIR = src
 ALGO_DIR = $(SRC_DIR)/Algorithms
@@ -42,6 +43,11 @@ SRCS = $(PARSER_DIR)/verify.c \
 	   $(RUN_DIR)/reverse_r_moves.c \
 	   $(ALGO_DIR)/sort_simple.c \
 	   $(ALGO_DIR)/sort_small.c \
+	   $(ALGO_DIR)/sort_medium.c \
+	   $(ALGO_DIR)/sort_medium_utils.c \
+	   $(ALGO_DIR)/sort_complex.c \
+	   $(ALGO_DIR)/sort_complex_utils.c \
+	   $(ALGO_DIR)/sort_complex_eval.c \
 	   main.c
 
 OBJS = $(SRCS:.c=.o)

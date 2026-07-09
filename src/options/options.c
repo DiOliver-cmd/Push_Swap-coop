@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   options.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dilferre <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/01 16:21:35 by dilferre          #+#    #+#             */
-/*   Updated: 2026/07/01 16:22:15 by dilferre         ###   ########.fr       */
+/*   Updated: 2026/07/07 18:00:00 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ static int	is_flag(char *arg, t_options *opt)
 {
 	if (ft_strncmp(arg, "--simple", -1) == ERR)
 		opt->strategy = STRAT_SIMPLE;
-	// else if (ft_strncmp(arg, "--medium", -1) == ERR)
-	// 	opt->strategy = STRAT_MEDIUM;
-	// else if (ft_strncmp(arg, "--complex", -1) == ERR)
-	// 	opt->strategy = STRAT_COMPLEX;
+	else if (ft_strncmp(arg, "--medium", -1) == ERR)
+		opt->strategy = STRAT_MEDIUM;
+	else if (ft_strncmp(arg, "--complex", -1) == ERR)
+		opt->strategy = STRAT_COMPLEX;
 	else if (ft_strncmp(arg, "--adaptive", -1) == ERR)
 		opt->strategy = STRAT_ADAPTIVE;
 	else if (ft_strncmp(arg, "--bench", -1) == ERR)
@@ -27,11 +27,6 @@ static int	is_flag(char *arg, t_options *opt)
 	else
 		return (ERR);
 	return (SUC);
-}
-
-void	iniciate_options(void)
-{
-	// IMPLEMENTEAR
 }
 
 int	parse_options(int argc, char *argv[], t_options *opt)

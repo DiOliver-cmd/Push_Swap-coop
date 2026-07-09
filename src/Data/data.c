@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/30 19:43:00 by masalaib          #+#    #+#             */
-/*   Updated: 2026/07/02 18:44:32 by dilferre         ###   ########.fr       */
+/*   Updated: 2026/07/07 18:00:00 by dilferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,7 @@
 
 t_data	*get_data(void)
 {
-	static t_data	data = {
-		.sa = 0, .sb = 0, .ss = 0, .pa = 0, .pb = 0,
-		.ra = 0, .rb = 0, .rr = 0, .rra = 0, .rrb = 0, .rrr = 0,
-		.bench = ERR,
-	};
+	static t_data	data;
 
 	return (&data);
 }
@@ -27,10 +23,10 @@ static char	*strategy_name(t_strategy s)
 {
 	if (s == STRAT_SIMPLE)
 		return ("Simple");
-	// if (s == STRAT_MEDIUM)
-	// 	return ("Medium");
-	// if (s == STRAT_COMPLEX)
-	// 	return ("Complex");
+	if (s == STRAT_MEDIUM)
+		return ("Medium");
+	if (s == STRAT_COMPLEX)
+		return ("Complex");
 	return ("Adaptive");
 }
 
@@ -38,8 +34,10 @@ static char	*complexity_name(t_strategy s)
 {
 	if (s == STRAT_SIMPLE)
 		return ("O(n2)");
-	// if (s == STRAT_MEDIUM)
-	// 	return ("O(n*sqrt(n))");
+	if (s == STRAT_MEDIUM)
+		return ("O(n*sqrt(n))");
+	if (s == STRAT_COMPLEX)
+		return ("O(n log n)");
 	return ("O(n log n)");
 }
 
