@@ -47,23 +47,12 @@ make re       # Performs a full re-compilation (fclean + all)
 
 You can force specific algorithms or benchmarking modes using the following flags:
 
-| Flag | Effect |
-| --- | --- |
-| `--simple` | Forces the use of the $O(n^2)$ algorithm.
-
- |
-| `--medium` | Forces the use of the $O(n\sqrt{n})$ algorithm.
-
- |
-| `--complex` | Forces the use of the $O(n \log n)$ algorithm.
-
- |
-| `--adaptive` | <br>*(Default)* Automatically selects the strategy based on the initial disorder.
-
- |
-| `--bench` | Appends a comprehensive statistics block to **stderr** after sorting.
-
- |
+Flag,Effect
+--simple,Forces the use of the O(n2) algorithm.
+--medium,Forces the use of the O(nn​) algorithm.
+--complex,Forces the use of the O(nlogn) algorithm.
+--adaptive,(Default) Automatically selects the strategy based on the initial disorder.
+--bench,Appends a comprehensive statistics block to stderr after sorting.
 
 ---
 
